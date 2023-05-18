@@ -10,6 +10,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'eslint-config-prettier',
     'plugin:react/recommended',
+    'plugin:storybook/recommended',
   ],
   plugins: ['@typescript-eslint', 'import', 'prettier', 'react', 'react-hooks'],
   parser: '@typescript-eslint/parser',
@@ -30,6 +31,7 @@ module.exports = {
       typescript: {}, // this loads <rootdir>/tsconfig.json to eslint
     },
   },
+
   rules: {
     'prettier/prettier': 'error',
     indent: 'off',
@@ -37,7 +39,13 @@ module.exports = {
     'prefer-const': 'error',
     'getter-return': 'warn',
     curly: ['error', 'all'],
-    eqeqeq: ['error', 'always', { null: 'ignore' }],
+    eqeqeq: [
+      'error',
+      'always',
+      {
+        null: 'ignore',
+      },
+    ],
     'no-implicit-coercion': 'error',
     'no-undef': 'off',
     'no-extra-boolean-cast': 'off',
@@ -82,15 +90,31 @@ module.exports = {
         selector: 'variable',
         leadingUnderscore: 'allow',
       },
-      { format: ['camelCase', 'PascalCase'], selector: 'function' },
-      { format: ['PascalCase'], selector: 'interface' },
-      { format: ['PascalCase'], selector: 'typeAlias' },
+      {
+        format: ['camelCase', 'PascalCase'],
+        selector: 'function',
+      },
+      {
+        format: ['PascalCase'],
+        selector: 'interface',
+      },
+      {
+        format: ['PascalCase'],
+        selector: 'typeAlias',
+      },
     ],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
+    '@typescript-eslint/array-type': [
+      'error',
+      {
+        default: 'array-simple',
+      },
+    ],
     '@typescript-eslint/no-unused-vars': [
       'error',
-      { ignoreRestSiblings: true },
+      {
+        ignoreRestSiblings: true,
+      },
     ],
     '@typescript-eslint/no-var-requires': 'warn',
     '@typescript-eslint/member-ordering': [
