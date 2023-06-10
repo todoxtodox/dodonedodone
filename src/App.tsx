@@ -1,5 +1,13 @@
+import useAuth from './hooks/useAuth';
+
 function App() {
-  return <div className="App"></div>;
+  const { signInWithGoogle } = useAuth();
+
+  return (
+    <div className="App">
+      <button onClick={signInWithGoogle}>google login</button>
+    </div>
+  );
 }
 
 export default App;
