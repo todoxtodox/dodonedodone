@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.24.0",
+    "@tanstack/react-query": "^4.29.12",
     "@vanilla-extract/css": "^1.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
