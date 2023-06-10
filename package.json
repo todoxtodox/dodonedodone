@@ -11,6 +11,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.24.0",
     "@vanilla-extract/css": "^1.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -36,8 +37,8 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
-    "msw": "^1.1.0",
     "eslint-plugin-storybook": "^0.6.12",
+    "msw": "^1.1.0",
     "prettier": "^2.8.4",
     "prop-types": "^15.8.1",
     "storybook": "^7.0.12",
